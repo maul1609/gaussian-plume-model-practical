@@ -1,0 +1,11 @@
+Running code:
+    * MATLAB: type >>gaussian_plume_model at the command prompt
+    * To do the overlay plot in the MATLAB version type >>overlay_on_map after running 
+      the model
+	* Python: can be run from ipython, by typing run -i gaussian_plume_model.py 
+	* To do the overlay plot in the python version type run -i overlay_on_map.py after 
+	  running the model
+Contributing development:
+	* at the moment the code is under private repo with no development branches. Contact 
+		the code owner to contribute ideas. 
+	
