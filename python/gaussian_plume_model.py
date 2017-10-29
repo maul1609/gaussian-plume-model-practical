@@ -119,7 +119,7 @@ Dz=10.;
 if stability_used == CONSTANT_STABILITY:
    
    stability=stab1*np.ones((days*24,1));
-   stability_str=stability_str[stab1];
+   stability_str=stability_str[stab1-1];
 elif stability_used == ANNUAL_CYCLE:
 
    stability=np.round(2.5*np.cos(times*2.*np.pi/(365.))+3.5);
@@ -171,7 +171,7 @@ else:
 # SECTION 3: Main loop
 # For all times...
 C1=np.zeros((len(x),len(y),len(wind_dir)))
-for i in tqdm.tqdm(range(0,len(wind_dir),1)):
+for i in tqdm.tqdm(range(0,len(wind_dir))):
    for j in range(0,stacks):
         C=np.ones((len(x),len(y)))
         C=gauss_func(Q[j],wind_speed[i],wind_dir[i],x,y,z,
