@@ -47,7 +47,7 @@ Ms=[58.44e-3 98e-3 200e-3 80e-3];
 Mw=18e-3;
 
 
-dxy=100;          % resolution of the model in both x and y directions
+dxy=50;          % resolution of the model in both x and y directions
 dz=10;
 x=-2500:dxy:2500; % solve on a 5 km domain
 y=x;              % x-grid is same as y-grid
@@ -67,18 +67,19 @@ stab1=1; % set from 1-6
 stability_used=CONSTANT_STABILITY;
 
 
-output=PLAN_VIEW;
-x_slice=26; % position (1-50) to take the slice in the x-direction
+output=HEIGHT_SLICE;
+x_slice=51; % position (1-50) to take the slice in the x-direction
 y_slice=1;  % position (1-50) to plot concentrations vs time
 
-wind=PREVAILING_WIND;
+wind=CONSTANT_WIND;
 stacks=ONE_STACK;
 stack_x=[0 1000 -200];
 stack_y=[0 250 -500];
 
-Q=[40 40 40]; % mass emitted per unit time
-H=[50 50 50]; % stack height, m
+Q=[Q_use 40 40]; % mass emitted per unit time
+H=[0 50 50]; % stack height, m
 days=50;          % run the model for 365 days
+days=1./24;
 %--------------------------------------------------------------------------
 times=[1:days.*24]./24;
 
@@ -107,9 +108,9 @@ switch output
         [x,y]=meshgrid(x,y); % x and y defined at all positions on the grid
         z=zeros(size(x));    % z is defined to be at ground level.
     case HEIGHT_SLICE
-        z=0:dz:500;       % z-grid
+        z=0:dz:600;       % z-grid
 
-        C1=zeros(length(y),length(z),days.*24); % array to store data, initialised to be zero
+        C1=zeros(length(z),length(y),days.*24); % array to store data, initialised to be zero
 
         [y,z]=meshgrid(y,z); % y and z defined at all positions on the grid
         x=x(x_slice).*ones(size(y));    % x is defined to be x at x_slice       
@@ -119,10 +120,10 @@ end
         
 
 % Set the wind based on input flags++++++++++++++++++++++++++++++++++++++++
-wind_speed=5.*ones(days.*24,1); % m/s
+wind_speed=wind_use.*ones(days.*24,1); % m/s
 switch wind
     case CONSTANT_WIND
-        wind_dir=0.*ones(days.*24,1);
+        wind_dir=180.*ones(days.*24,1);
         wind_dir_str='Constant wind';
     case FLUCTUATING_WIND
         wind_dir=360.*rand(days.*24,1);
