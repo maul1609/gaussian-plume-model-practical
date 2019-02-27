@@ -1,5 +1,5 @@
 function [sig_y,sig_z]=calc_sigmas(CATEGORY,x)
-
+% see https://www3.epa.gov/scram001/userg/regmod/isc3v2.pdf
 a=zeros(size(x));
 b=zeros(size(x));
 c=zeros(size(x));

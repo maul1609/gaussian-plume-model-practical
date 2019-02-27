@@ -47,9 +47,9 @@ Ms=[58.44e-3 98e-3 200e-3 80e-3];
 Mw=18e-3;
 
 
-dxy=50;          % resolution of the model in both x and y directions
-dz=10;
-x=-2500:dxy:2500; % solve on a 5 km domain
+dxy=1;          % resolution of the model in both x and y directions
+dz=1;
+x=-500:dxy:500; % solve on a 5 km domain
 y=x;              % x-grid is same as y-grid
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -68,7 +68,7 @@ stability_used=CONSTANT_STABILITY;
 
 
 output=HEIGHT_SLICE;
-x_slice=51; % position (1-50) to take the slice in the x-direction
+x_slice=501; % position (1-50) to take the slice in the x-direction
 y_slice=1;  % position (1-50) to plot concentrations vs time
 
 wind=CONSTANT_WIND;
