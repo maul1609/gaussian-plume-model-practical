@@ -1,0 +1,6 @@
+,Year,Pollutant Name,PollCode,PlantID,Site,Easting,Northing,Operator,SectorID,Sector,Emission,Unit,Region,Datatype,Distance From Bristol
+203,2018,CH4,3,4147,Yanley,355774,169496,Viridor Waste Management Ltd,21,"Waste collection, treatment & disposal",0.063640125,Tonnes,England,M,4532.063988956908
+204,2018,CH4,3,4148,Yanley Phase II,355774,169496,Viridor Waste Management Ltd,21,"Waste collection, treatment & disposal",0.047902518,Tonnes,England,M,4532.063988956908
+698,2018,CH4,3,8426,Bristol,358400,173200,University of Bristol,24,Public administration,0.6879436040000001,Tonnes,England,M,8.48528137423857
+846,2018,CH4,3,8770,Bristol,358400,173550,University Hospitals Bristol NHS Foundation Trust,24,Public administration,0.966001804,Tonnes,England,M,356.0505582076793
+898,2018,CH4,3,8874,Southmead Hospital,359150,177490,North Bristol NHS Trust,24,Public administration,0.7864237209999999,Tonnes,England,M,4362.012379624799
