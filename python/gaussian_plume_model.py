@@ -65,10 +65,10 @@ stability_str=['Very unstable','Moderately unstable','Slightly unstable', \
 HUMIDIFY=2;
 DRY_AEROSOL=1;
 
-SODIUM_CHLORIDE=1;
-SULPHURIC_ACID=2;
-ORGANIC_ACID=3;
-AMMONIUM_NITRATE=4;
+SODIUM_CHLORIDE=0;
+SULPHURIC_ACID=1;
+ORGANIC_ACID=2;
+AMMONIUM_NITRATE=3;
 nu=[2., 2.5, 1., 2.];
 rho_s=[2160., 1840., 1500., 1725.];
 Ms=[58.44e-3, 98e-3, 200e-3, 80e-3];
